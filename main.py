@@ -15,6 +15,13 @@ import pyjokes
 from pywikihow import search_wikihow
 from playsound import playsound
 import pywhatkit as kit
+from bardapi import BardCookies
+
+cookie_dict ={
+    "__Secure-1PSID" : "eQi7koAjvQUTvvVYZgkHa5S2r--anUxFBQYuqtN-CP3dnVZeAIlWCPNoClEghGY_slDOdg.",
+    "__Secure-1PSIDTS" : "sidts-CjIBPVxjSsJkQCjw7loNb4n8ajlnRpJrIdlazZByOOwH7MSNA4-CdI_KlGZqpy8wCCTusBAA",
+    "__Secure-1PSIDCC" : "ABTWhQHwbEwfcO-4Ex9BLJX4DHt6Xg2YwlO1_nim_7_YbOSbU268gQ4SGPfadD5AW45wOUmYPg",
+}
 # from nltk.sentiment import SentimentIntensityAnalyzer
 
 # sia = SentimentIntensityAnalyzer()
@@ -82,6 +89,16 @@ while True:
     print(query)
     if query==0:
         continue
+
+    bard = BardCookies(cookie_dict=cookie_dict)
+
+    if 'ai' in query:
+        speak("Bard is actiavted please tell your query : ")
+        Tell = takecommand().lower()
+        reply = bard.get_answer(Tell)['content']
+        print(reply)
+        speak(reply)
+
 
     user_details = {}
 

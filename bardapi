@@ -1,0 +1,15 @@
+#importing
+from bardapi import BardCookies
+
+cookie_dict ={
+    "__Secure-1PSID" : "eQi7koAjvQUTvvVYZgkHa5S2r--anUxFBQYuqtN-CP3dnVZeAIlWCPNoClEghGY_slDOdg.",
+    "__Secure-1PSIDTS" : "sidts-CjIBPVxjStl-KagXb1CIg_j0fN1C1RgZq-nb4Lw1Eb-uYAWTAt635fr2EwSGWLOz3C6GBxAA",
+    "__Secure-1PSIDCC" : "ABTWhQFMdxTa_rsgICSmoq66Hg7x-KJMSJo0OsTEDUNAyS7_jwBCduKFV9XrzlOKL6bb26Y8IQ",
+}
+
+bard = BardCookies(cookie_dict=cookie_dict)
+
+while True:
+    query =input("Enter your query: ")
+    reply = bard.get_answer(query)['content']
+    print(reply)
