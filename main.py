@@ -149,6 +149,9 @@ while True:
     if 'hello' in query:
         speak(r.choice(greetings))
 
+    if 'how are you' in query:
+        speak('As a computer program, I do not have feelings, but I appreciate your inquiry and feel lucky! How can I assist you today?')
+
     if 'who are you' in query :
      speak(' I am a highly Functional voice assistant created by Priyanshu , specially desgined for his collaborative workspace.')
 
