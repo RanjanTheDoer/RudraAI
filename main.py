@@ -19,8 +19,8 @@ from bardapi import BardCookies
 
 cookie_dict ={
     "__Secure-1PSID" : "eQi7koAjvQUTvvVYZgkHa5S2r--anUxFBQYuqtN-CP3dnVZeAIlWCPNoClEghGY_slDOdg.",
-    "__Secure-1PSIDTS" : "sidts-CjIBPVxjSsJkQCjw7loNb4n8ajlnRpJrIdlazZByOOwH7MSNA4-CdI_KlGZqpy8wCCTusBAA",
-    "__Secure-1PSIDCC" : "ABTWhQHwbEwfcO-4Ex9BLJX4DHt6Xg2YwlO1_nim_7_YbOSbU268gQ4SGPfadD5AW45wOUmYPg",
+    "__Secure-1PSIDTS" : "sidts-CjIBPVxjSq9J93IGrBYdLgK9qf0k-wyNWJrKAHmTrfIlKSMWDt1guuDqGO98KXZrVk3bSBAA",
+    "__Secure-1PSIDCC" : "ABTWhQHte1Jn0tnLSVf3mR1TzDaZU1SZdQbCtYroGjMAgCCuhwsBh6oteeA1D4t5ryciaddJmw",
 }
 # from nltk.sentiment import SentimentIntensityAnalyzer
 
@@ -92,8 +92,8 @@ while True:
 
     bard = BardCookies(cookie_dict=cookie_dict)
 
-    if 'ai' in query:
-        speak("Bard is actiavted please tell your query : ")
+    if 'kill' in query:
+        speak("BARD is actiavted please tell your query : ")
         Tell = takecommand().lower()
         reply = bard.get_answer(Tell)['content']
         print(reply)
@@ -153,7 +153,7 @@ while True:
         speak('As a computer program, I do not have feelings, but I appreciate your inquiry and feel lucky! How can I assist you today?')
 
     if 'who are you' in query :
-     speak(' I am a highly Functional voice assistant created by Priyanshu , specially desgined for his collaborative workspace.')
+     speak(' I am Tanni a highly Functional voice assistant created by Priyanshu , specially desgined for his collaborative workspace.')
 
     if "what can you do"in query or "what do you do" in query:
         speak('I perform various tasks assigned to me , such includes - resarching or gathering information , performing multiple operations , managing multiple applications and the most important helping the team in Creation of Multiverse  ')
